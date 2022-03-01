@@ -1,0 +1,50 @@
+@import '../../styles/styles.scss';
+
+.contact-section {
+      background-color: $default-blue;
+
+      .contact-platforms-container {
+            @include display-flex();
+            .platform {
+                  margin-right: $space-5
+            }
+      }
+
+      .contact-form-container {
+            .form {
+                  @include display-flex();
+                  @include flex-direction(column);
+
+                  .input-wrapper {
+                        @include display-flex();
+                        @include justify-content(space-evenly);
+                  }
+                  .name-and-email-input,
+                  .content-input {
+                        margin: $space-6;
+                        margin-left: 0px;
+                        background-color: $light-gray;
+                        border-radius: calc($space-6 / 2);
+                  }
+                  .content-input {
+                        height: 100%;
+                  }
+
+                  .submit-button {
+                        background-color: $light-blue;
+                        width: 15vw;
+                        align-self: center;
+                        margin-top: $space-6;
+                        color: $dark-blue;
+                        font-weight: $font-weight-semibold;
+                  }
+                  .submit-button-disabled {
+                        width: 15vw;
+                        align-self: center;
+                        margin-top: $space-6;
+                        background-color: #cccccc;
+                        color: #666666;
+                  }
+            }
+      }
+}

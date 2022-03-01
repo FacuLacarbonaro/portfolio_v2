@@ -1,0 +1,8 @@
+@import '../../styles/styles.scss';
+
+$header-and-margins: $header-height + $space-5;
+
+.main-section {
+  height: calc(100vh - $header-and-margins);
+  background-color: $default-blue;
+}

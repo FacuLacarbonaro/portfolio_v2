@@ -1,0 +1,35 @@
+@import '../../../styles/styles.scss';
+
+.header {
+      background-color: $dark-blue !important;
+      padding: $space-6 0;
+
+      .toolbar {
+            @include display-flex();
+            @include align-items(center);
+            @include justify-content(space-between);
+            height: $header-height;
+            min-height: $header-height;
+            .logo{
+                  color: $light-gray
+            }
+            .options-container {
+                  @include display-flex();
+                  .item {
+                        width: fit-content;
+                        margin: 0 $space-6;
+                        cursor: pointer;
+                        @include display-flex();
+
+                        .text {
+                              color: $base-white;
+                              font-weight: $font-weight-semibold;
+                        }
+                  }
+            }
+      }
+}
+.sidebar-list {
+      margin: $space-5 !important;
+      padding: 16px;
+}

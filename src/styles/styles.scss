@@ -1,0 +1,24 @@
+@import './partials/colors';
+@import './partials/fonts';
+@import './partials/mixins';
+@import './partials/variables';
+
+body {
+      padding: unset;
+      margin: unset;
+      font-family: $font-family-normal;
+}
+
+.section {
+      padding: 10vh 20vw;
+
+      .section-title {
+            font-size: $font-size-XXL;
+            color: $light-gray;
+            margin: unset;
+      }
+      .section-p {
+            font-size: $font-size-XL - 2;
+            color: $light-gray;
+      }
+}

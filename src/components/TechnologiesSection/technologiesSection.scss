@@ -1,0 +1,18 @@
+@import '../../styles/styles.scss';
+
+.technologies-section {
+      background-color: $default-blue;
+
+      .technologies-list {
+            @include display-flex();
+            @include justify-content(space-between);
+            margin-top: $space-5;
+
+            .technology-item {
+                  @include display-flex();
+                  @include justify-content(center);
+                  @include align-items(center);
+                  margin: 0 $space-6;
+            }
+      }
+}
