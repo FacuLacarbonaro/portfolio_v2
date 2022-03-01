@@ -15,8 +15,26 @@ import './technologiesSection.scss';
 export const TechnologiesSection = () => {
       return (
             <section className='technologies-section section' id='technologies'>
-                  <h1 className='section-title'>Technologies</h1>
-                  <p className='section-p'>
+                  <h1
+                        className='section-title'
+                        data-aos='fade-up'
+                        data-aos-duration='1000'
+                        data-aos-delay='200'
+                        data-aos-easing='ease-in-out'
+                        data-aos-mirror='true'
+                        data-aos-once='true'
+                  >
+                        Technologies
+                  </h1>
+                  <p
+                        className='section-p'
+                        data-aos='fade-up'
+                        data-aos-duration='1000'
+                        data-aos-delay='300'
+                        data-aos-easing='ease-in-out'
+                        data-aos-mirror='true'
+                        data-aos-once='true'
+                  >
                         Here you can find the main technologies I like to work
                         with ! I like to be in constant learning of the new
                         versions of each one and expand my knowledge to new and
@@ -30,6 +48,12 @@ export const TechnologiesSection = () => {
                                     md={1}
                                     className='technology-item'
                                     key={technology.id}
+                                    data-aos='flip-left'
+                                    data-aos-duration='1500'
+                                    data-aos-delay='400'
+                                    data-aos-easing='ease-in-out'
+                                    data-aos-mirror='true'
+                                    data-aos-once='true'
                               >
                                     {technology.icon}
                               </Grid>

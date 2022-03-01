@@ -3,6 +3,42 @@
 $header-and-margins: $header-height + $space-5;
 
 .main-section {
-  height: calc(100vh - $header-and-margins);
-  background-color: $default-blue;
+      @include display-flex();
+      background-color: $default-blue;
+
+      .maint-text-wrapper {
+            @include display-flex();
+            @include align-items(flex-start);
+            @include flex-direction(column);
+            margin-top: 4vw;
+
+            .name {
+                  font-size: clamp($font-size-XXXL, 5vw, 4rem);
+                  font-weight: bold !important;
+                  color: $light-gray;
+                  margin: unset;
+            }
+
+            .role-container {
+                  @include display-flex();
+                  @include align-items(center);
+                  .role {
+                        font-size: $font-size-XL;
+                        font-weight: bold !important;
+                        color: $light-gray;
+                        margin-left: $space-6;
+                  }
+            }
+      }
+
+      .main-image-wrapper {
+            width: clamp(280px, 35vw, 400px);
+            margin: auto;
+
+            .profile-picture {
+                  max-width: 100%;
+                  height: auto;
+                  border-radius: 50%;
+            }
+      }
 }

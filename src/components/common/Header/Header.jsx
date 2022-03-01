@@ -22,7 +22,15 @@ export const Header = () => {
             <AppBar position='sticky' color='default' className='header'>
                   <Container>
                         <Toolbar disableGutters className='toolbar'>
-                              <h2 className='logo'>Lacar.</h2>
+                              <Link
+                                    to='/'
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                              >
+                                    <h2 className='logo'>Lacar.</h2>
+                              </Link>
                               <Hidden xsDown>
                                     <div className='options-container'>
                                           {OPTIONS_HEADER.map((option) => (
@@ -30,12 +38,16 @@ export const Header = () => {
                                                       to={option.toComponent}
                                                       spy={true}
                                                       smooth={true}
-                                                      offset={-50}
+                                                      offset={
+                                                            option.id === 1
+                                                                  ? -70
+                                                                  : -60
+                                                      }
                                                       duration={500}
                                                       key={option.id}
                                                 >
                                                       <div className='item'>
-                                                            <p className='text'>
+                                                            <p className='text underline-hover-effect'>
                                                                   {
                                                                         option.displayText
                                                                   }
@@ -47,7 +59,7 @@ export const Header = () => {
                               </Hidden>
                               <Hidden smUp>
                                     <IconButton onClick={() => setOpen(true)}>
-                                          <MenuIcon />
+                                          <MenuIcon className='icon-sidebar' />
                                     </IconButton>
                               </Hidden>
                         </Toolbar>
@@ -75,12 +87,12 @@ export const Header = () => {
                                           to={option.toComponent}
                                           spy={true}
                                           smooth={true}
-                                          offset={50}
+                                          offset={60}
                                           duration={500}
                                           key={option.id}
                                     >
                                           <div className='item'>
-                                                <p className='text'>
+                                                <p className='sidebar-text underline-hover-effect'>
                                                       {option.displayText}
                                                 </p>
                                           </div>

@@ -2,4 +2,9 @@
 
 .projects-section {
       background-color: $dark-blue;
+
+      .projects-grid-container{
+            margin-top: $space-6 ;
+            margin-bottom: $space-6 ;
+      }
 }

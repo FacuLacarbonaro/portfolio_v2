@@ -10,7 +10,7 @@ body {
 }
 
 .section {
-      padding: 10vh 20vw;
+      padding: 10vh 15vw;
 
       .section-title {
             font-size: $font-size-XXL;
@@ -21,4 +21,26 @@ body {
             font-size: $font-size-XL - 2;
             color: $light-gray;
       }
+}
+
+.underline-hover-effect {
+      display: inline-block;
+      padding-bottom: 0.25rem;
+      position: relative;
+}
+
+/* Underline hover effect */
+
+.underline-hover-effect::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: $aqua-green;
+      transition: width 0.25s ease-out;
+}
+.underline-hover-effect:hover::before {
+      width: 100%;
 }

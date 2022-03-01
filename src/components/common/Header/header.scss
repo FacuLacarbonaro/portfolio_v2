@@ -10,8 +10,9 @@
             @include justify-content(space-between);
             height: $header-height;
             min-height: $header-height;
-            .logo{
-                  color: $light-gray
+            .logo {
+                  color: $light-gray;
+                  cursor: pointer
             }
             .options-container {
                   @include display-flex();
@@ -28,8 +29,31 @@
                   }
             }
       }
+
+      .icon-sidebar {
+            color: $base-white;
+      }
+}
+
+.MuiDrawer-paperAnchorRight {
+      background-color: $light-gray !important;
 }
 .sidebar-list {
       margin: $space-5 !important;
       padding: 16px;
+
+      .item {
+            width: fit-content;
+            margin: 0 $space-6;
+            cursor: pointer;
+            transition: all 0.5s ease;
+      }
+      .item:hover {
+            transform: translateX($space-6);
+            color: $light-blue;
+      }
+}
+.sidebar-text {
+      color: $base-black;
+      font-weight: $font-weight-semibold;
 }

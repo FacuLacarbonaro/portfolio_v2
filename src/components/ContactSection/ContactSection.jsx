@@ -1,4 +1,4 @@
-import { Button, TextField } from '@material-ui/core';
+import { Button, CircularProgress, TextField } from '@material-ui/core';
 import { useEffect, useState } from 'react';
 import { emailValidator } from '../../assets/utils/emailValidator';
 import emailjs from '@emailjs/browser';
@@ -11,9 +11,12 @@ import './contactSection.scss';
 export const ContactSection = ({ setOpenToast }) => {
       const [formData, setFormData] = useState(emptyFormData);
       const [isValidEmail, setisValidEmail] = useState(false);
+      const [isLoadingSubmit, setIsLoadingSubmit] = useState(false);
 
       const handleSubmit = (e) => {
             e.preventDefault();
+
+            setIsLoadingSubmit(true);
             emailjs
                   .sendForm(
                         process.env.REACT_APP_SERVICE_ID,
@@ -27,6 +30,8 @@ export const ContactSection = ({ setOpenToast }) => {
                                     message: 'Email Sended.',
                                     severity: 'success',
                               });
+                              setIsLoadingSubmit(false);
+
                               e.target.reset();
                         },
                         (error) => {
@@ -34,6 +39,7 @@ export const ContactSection = ({ setOpenToast }) => {
                                     message: 'Error, try again.',
                                     severity: 'error',
                               });
+                              setIsLoadingSubmit(false);
                         }
                   );
       };
@@ -136,9 +142,15 @@ export const ContactSection = ({ setOpenToast }) => {
                                                 : 'submit-button'
                                     }
                                     color='primary'
-                                    disabled={isValidSubmit()}
+                                    disabled={
+                                          isValidSubmit() || isLoadingSubmit
+                                    }
                               >
-                                    Send
+                                    {isLoadingSubmit ? (
+                                          <CircularProgress size={20} />
+                                    ) : (
+                                          'Send'
+                                    )}
                               </Button>
                         </form>
                   </div>
