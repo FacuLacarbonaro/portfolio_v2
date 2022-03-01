@@ -87,7 +87,7 @@ export const Header = () => {
                                           to={option.toComponent}
                                           spy={true}
                                           smooth={true}
-                                          offset={60}
+                                          offset={-50}
                                           duration={500}
                                           key={option.id}
                                     >
