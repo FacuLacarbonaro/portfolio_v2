@@ -20,7 +20,7 @@ export const Header = () => {
 
       return (
             <AppBar position='sticky' color='default' className='header'>
-                  <Container>
+                  <Container className='header-container'>
                         <Toolbar disableGutters className='toolbar'>
                               <Link
                                     to='/'

@@ -3,31 +3,36 @@
 .header {
       background-color: $dark-blue !important;
       padding: $space-6 0;
+      .header-container{
 
-      .toolbar {
-            @include display-flex();
-            @include align-items(center);
-            @include justify-content(space-between);
-            height: $header-height;
-            min-height: $header-height;
-            .logo {
-                  color: $light-gray;
-                  cursor: pointer
-            }
-            .options-container {
-                  @include display-flex();
-                  .item {
-                        width: fit-content;
-                        margin: 0 $space-6;
-                        cursor: pointer;
+            max-width: unset;
+
+
+                  .toolbar {
                         @include display-flex();
+                        @include align-items(center);
+                        @include justify-content(space-between);
+                        height: $header-height;
+                        min-height: $header-height;
+                        .logo {
+                              color: $light-gray;
+                              cursor: pointer
+                        }
+                        .options-container {
+                              @include display-flex();
+                              .item {
+                                    width: fit-content;
+                                    margin: 0 $space-6;
+                                    cursor: pointer;
+                                    @include display-flex();
 
-                        .text {
-                              color: $base-white;
-                              font-weight: $font-weight-semibold;
+                                    .text {
+                                          color: $base-white;
+                                          font-weight: $font-weight-semibold;
+                                    }
+                              }
                         }
                   }
-            }
       }
 
       .icon-sidebar {
