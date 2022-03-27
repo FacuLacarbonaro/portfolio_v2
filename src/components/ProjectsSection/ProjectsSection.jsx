@@ -5,6 +5,7 @@ import { CardProject } from './CardProject/CardProject';
 import LakersFansImg from '../../assets/img/jpg/lakers-fans-web.png';
 import MoviesPageImg from '../../assets/img/jpg/mar_del_movie.jpg';
 import EcommercePageImg from '../../assets/img/jpg/rivals-ecommerce.jpg';
+import WeatherPageImg from '../../assets/img/jpg/weather-screen.jpg';
 
 import './projectsSection.scss';
 
@@ -106,5 +107,18 @@ const PROJECT_LIST = [
             Learning project`,
             url: 'https://rivals-ecommerce.netlify.app/',
             delay: '800',
+      },
+      {
+            id: 5,
+            img: WeatherPageImg,
+            alt: 'Weather app v2',
+            title: 'Weather app',
+            description: `Weather app.
+
+            Made with: Reactjs, Weather API.
+
+            Learning project`,
+            url: 'https://clima-app-v2.netlify.app/',
+            delay: '1000',
       },
 ];
